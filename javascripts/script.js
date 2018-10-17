@@ -12,6 +12,10 @@ $(function() {
       array[j] = temp;
     }
   }
+  
+  if (window.location.search.split('names=')[1]) {
+    $('textarea').val(atob(window.location.search.split('names=')[1]))
+  }
 
   $('form').submit(function(e) {
     e.preventDefault();
